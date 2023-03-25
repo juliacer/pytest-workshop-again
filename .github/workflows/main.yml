@@ -1,0 +1,16 @@
+name: Test my project
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - name: Install pytest
+      run:  python -m pip install -U pytest
+    - name: Run tests
+      run:  python -m pytest *.py
