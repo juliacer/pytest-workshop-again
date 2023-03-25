@@ -1,5 +1,5 @@
 def fizzbuzz(arg):
-    if arg % 3 == 0 and arg % 4 == 0:
+    if arg % 3 == 0 and arg % 7 == 0:
         return 'fizzbuzz'
     if arg % 3 == 0:
         return 'fizz'
